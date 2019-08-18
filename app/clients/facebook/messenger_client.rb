@@ -12,7 +12,7 @@ class Facebook::MessengerClient
   private
 
   def faraday_connection
-    connection = Faraday.new(url: graph_url) do |faraday|
+    connection = Faraday.new(url: api_url) do |faraday|
       faraday.response :json
       faraday.request :json
       faraday.request :url_encoded
@@ -25,7 +25,7 @@ class Facebook::MessengerClient
     ENV['FACEBOOK_PAGE_ACCESS_TOKEN']
   end
 
-  def graph_url
+  def api_url
     ENV['FACEBOOK_GRAPH_BASE_URL']
   end
 end
