@@ -1,5 +1,5 @@
-class WebhooksController < ApplicationController
-  skip_before_action :verify_authenticity_token
+class Facebook::WebhooksController < ApplicationController
+  # skip_before_action :verify_authenticity_token
 
   HUB_VERIFY_TOKEN = 'hub.verify_token'.freeze
   HUB_CHALLENGE = 'hub.challenge'.freeze

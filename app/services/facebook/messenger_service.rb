@@ -1,4 +1,4 @@
-class MessengerService
+class Facebook::MessengerService
 
   def initialize(params)
     @bot_message = params[:entry].first

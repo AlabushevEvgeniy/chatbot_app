@@ -1,16 +1,12 @@
-class MessengerClient
+class Facebook::MessengerClient
   def send_message(message)
     response = faraday_connection.post("me/messages?access_token=#{page_access_token}", message)
     response.body if response&.success?
   end
 
   def user_info(sender_id)
-    begin
-      response = faraday_connection.get("#{sender_id}?access_token=#{page_access_token}")
-      response.body if response&.success?
-    rescue StandardError
-      nil
-    end
+    response = faraday_connection.get("#{sender_id}?access_token=#{page_access_token}")
+    response.body if response&.success?
   end
 
   private

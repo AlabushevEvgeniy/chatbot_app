@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2019_08_17_084428) do
   enable_extension "plpgsql"
 
   create_table "facebook_users", force: :cascade do |t|
-    t.string "user_id"
+    t.string "facebook_user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
