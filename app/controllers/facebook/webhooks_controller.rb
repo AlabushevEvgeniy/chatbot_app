@@ -5,7 +5,8 @@ class Facebook::WebhooksController < ApplicationController
   HUB_CHALLENGE = 'hub.challenge'.freeze
 
   def create
-    MessengerService.new(params).process_message!
+    # Facebook::MessengerService.new(params).process_message!
+    MessengerClient.new.send_message('hello world!!!')
     head :ok
   end
 
