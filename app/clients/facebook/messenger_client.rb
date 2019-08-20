@@ -22,10 +22,12 @@ class Facebook::MessengerClient
   end
 
   def page_access_token
-    ENV['FACEBOOK_PAGE_ACCESS_TOKEN']
+    # ENV['FACEBOOK_PAGE_ACCESS_TOKEN']
+    "EAAHlQHlllXEBALr25Mb2nyBODmZBwl10TiHcGQOK9cT4rGcJKFyns5nLiLg4nFU6xK9fdlZCN0VmeWKJ1MeMRyX2oa7h2m3tK51pNrg1Vsbp4bmTVeezuFD2i5zaoKNqPmv7RQxYGpIdljcbZA7g9QNFxIQ2dpjgP3LL25X4gZDZD"
   end
 
   def api_url
-    ENV['FACEBOOK_GRAPH_BASE_URL']
+    # ENV['FACEBOOK_GRAPH_BASE_URL']
+    "https://graph.facebook.com/v3.2/"
   end
 end

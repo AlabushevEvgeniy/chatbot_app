@@ -22,7 +22,8 @@ class Facebook::WebhooksController < ApplicationController
   end
 
   def webhook_verify_key
-    ENV['FACEBOOK_WEBHOOK_VERIFY_KEY']
+    # ENV['FACEBOOK_WEBHOOK_VERIFY_KEY']
+    "2387c744-db7f-4034-b50e-3cf75c1e9799"
   end
 end
 
