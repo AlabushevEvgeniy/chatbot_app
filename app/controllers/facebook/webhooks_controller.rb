@@ -8,6 +8,11 @@ class Facebook::WebhooksController < ApplicationController
     render plain: params[HUB_CHALLENGE]
   end
 
+  def create
+    Facebook::MessengerClient.new.send_message('hello world!!!')
+    head :ok
+  end
+
   private
 
   def index_permit_params
