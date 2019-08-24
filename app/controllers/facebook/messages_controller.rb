@@ -8,8 +8,7 @@ class Facebook::MessagesController < ApplicationController
                       "message": {
                         "text": "hello, world!"
                       }
-                    }
-                  )
+                    )
     head :ok
   end
 end
